@@ -19,6 +19,8 @@ input.map((string) => {
     string = string.replace(/three/gi, 'threee')
     string = string.replace(/five/gi, 'fivee')
     string = string.replace(/nine/gi, 'ninee')
+    string = string.replace(/eight/gi, "eeightt") // turned out that this was the problem all along,
+    string = string.replace(/two/gi, 'twoo')      // the author did not specify that the individual letters overlap so i had to copy the instances that might do.
     string = string.replace(/one|two|three|four|five|six|seven|eight|nine/gi, function(matched){
         return mapObj[matched]
        })
