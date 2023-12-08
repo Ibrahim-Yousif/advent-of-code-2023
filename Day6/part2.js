@@ -1,7 +1,7 @@
-const [time, distance] = require('./input')
-
+const [time, distance] = require('./input2')
+console.log(time,distance)
 let output = 1
-for(let i = 0 ; i < time.length ; i++){
+for(let i = 0 ; i < 1 ; i++){
     let [a,b,c] = [-1 , time[i], -distance[i]]
     let delta1 = (-b + Math.sqrt(Math.pow(b,2)-(4*a*c))) / (2*a)
     let delta2 = (-b - Math.sqrt(Math.pow(b,2)-(4*a*c))) / (2*a)
@@ -22,6 +22,7 @@ for(let i = 0 ; i < time.length ; i++){
     }
     else raceWins = (testValues[3]-1)-(testValues[1]+1)+1
     output *= raceWins
+    console.log(delta1,delta2,a,b,c)
 }
 
 console.log(output)
